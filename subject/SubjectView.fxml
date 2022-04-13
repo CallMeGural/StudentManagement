@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1080.0" style="-fx-background-color: #B1D0E0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="subject.SubjectController">
+   <top>
+      <HBox prefHeight="150.0" prefWidth="1080.0" style="-fx-background-color: #406882;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="90.0" prefWidth="980.0" style="-fx-background-color: #1A374D;" text="Subject Management" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="1080.0" style="-fx-background-color: #406882;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addStudentButton" mnemonicParsing="false" onAction="#addSubject" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1A374D;" text="Add" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="56.0" right="28.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="editStudentButton" mnemonicParsing="false" onAction="#editSubject" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1A374D;" text="Edit" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="28.0" right="28.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="deleteStudentButton" mnemonicParsing="false" onAction="#deleteSubject" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1A374D;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="28.0" right="28.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="menuButton" layoutX="745.0" layoutY="35.0" mnemonicParsing="false" onAction="#viewMenu" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1A374D;" text="Back to Menu" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="28.0" right="56.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <HBox prefHeight="400.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="subjectTable" prefHeight="400.0" prefWidth="750.0">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="187.5" resizable="false" text="Name" />
+                <TableColumn fx:id="abbrCol" prefWidth="187.5" resizable="false" text="Abbreviation" />
+                  <TableColumn fx:id="maxCapCol" prefWidth="187.5" text="Maximal Capacity" />
+                  <TableColumn fx:id="realCapCol" prefWidth="187.5" resizable="false" text="Real Capacity [%]" />
+                  <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" visible="false" />
+              </columns>
+               <HBox.margin>
+                  <Insets left="165.0" right="165.0" />
+               </HBox.margin>
+            </TableView>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

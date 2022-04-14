@@ -8,10 +8,10 @@ import java.sql.SQLException;
 import student.Student;
 
 public class DbConnect {
-	private static String HOST = "127.0.0.1";
-	private static int PORT = 3306;
-	private static String DB_NAME = "school";
-	private static String USERNAME = "root";
+	private static String HOST = "";
+	private static int PORT = ;
+	private static String DB_NAME = "";
+	private static String USERNAME = "";
 	private static String PASSWORD = "";
 	private static Connection connection;
 	
